@@ -1,6 +1,6 @@
 package labrarySimulation;
 /*
- * Project Phase #2
+ * Project Phase #1
  * * Group Members:
  * 1. Ahmed Abdullah Al-Musallam - ID: 446104786
  * 2. Abdullah Khalil Abu Nadi  - ID:  446103718
