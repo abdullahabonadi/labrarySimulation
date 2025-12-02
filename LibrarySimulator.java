@@ -14,12 +14,13 @@ public class LibrarySimulator {
 	public static void main(String[] args) {
         boolean running = true;  
 
-        Scanner input = new Scanner(System.in);  
-
+        Scanner input = new Scanner(System.in); 
+		// Create three member accounts
         Member U1 = new Member(1,"User 100",0);  
         Member U2 = new Member(2,"User 101",0);  
-        Member U3 = new Member(3,"User 102 ", 0);  
-		
+        Member U3 = new Member(3,"User 102 ", 0);
+          
+		// Main program loop
         while (running) {  
             System.out.println("\n========== Welcome to the Library Simulation ==========");  
             System.out.println("Select an option:");  
@@ -32,9 +33,9 @@ public class LibrarySimulator {
             
             int choice = input.nextInt();  
             
-            Member status=null;  
-
-            if (choice >= 1 && choice <= 3) {  
+            Member status=null; // Reference to current active member 
+            // Member login section
+            if (choice >= 1 && choice <= 3) {  // Set current member based on user choice
                 if (choice == 1)   
                 	status = U1;  
                 else if (choice == 2)   
@@ -43,7 +44,7 @@ public class LibrarySimulator {
                 	status = U3;
             
 
-            
+            // Member session loop
             boolean sessionActive = true;  
             while (sessionActive) {  
 				
@@ -57,7 +58,7 @@ public class LibrarySimulator {
           
             int uOption= input.nextInt(); 
             
-            
+            // Process member menu options
             switch (uOption) {  
             case 1:  
                 status.viewBorrowedCount();  
@@ -83,6 +84,7 @@ public class LibrarySimulator {
             
             
         }
+				// Administrator menu section
             else if (choice == 4) {  
                 
                   
@@ -123,10 +125,12 @@ public class LibrarySimulator {
                 }  
   
             } 
+				// Exit program
             else if (choice == 5) {
                 System.out.println("Exiting Program. Goodbye!");
                 running = false;
             }
+				// Invalid main menu choice (retries entry)
             else {
                 System.out.println("Invalid choice. Please try again.");
             }   }
